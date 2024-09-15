@@ -216,5 +216,7 @@
   "advancements.l2archery.advancements.archery.wind_bow.description": "制作逐风",
   "advancements.l2archery.advancements.archery.wind_bow.title": "随风的传说",
   "advancements.l2archery.advancements.archery.winter_bow.description": "制作霜夜",
-  "advancements.l2archery.advancements.archery.winter_bow.title": "下雪了。。。"
+  "advancements.l2archery.advancements.archery.winter_bow.title": "下雪了。。。",
+  "l2archery.feature.double_charge": "拉弓至两倍满蓄力时间后射出的箭造成%s伤害",
+  "upgrade.l2archery.double_charge": "重蓄力"
 }

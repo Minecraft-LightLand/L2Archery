@@ -71,7 +71,7 @@ public class ArcheryItems {
 	public static final SimpleEntry<Upgrade> GLOW_UP, NO_FALL_UP, FIRE_UP, ICE_UP, EXPLOSION_UP, ENDER_UP,
 			MAGNIFY_UP_1, MAGNIFY_UP_2, MAGNIFY_UP_3, DAMAGE_UP, PUNCH_UP, BLACKSTONE_UP, HARM_UP, HEAL_UP, SHINE_UP,
 			LEVITATE_UP, SUPERDAMAGE_UP, RAILGUN_UP, FLUX_UP, FLOAT_UP, SLOW_UP, POISON_UP, WITHER_UP, WEAK_UP, CORROSION_UP,
-			CURSE_UP, CLEANSE_UP, ADVANCED_INFINITY, EXPLOSION_BREAKER;
+			CURSE_UP, CLEANSE_UP, ADVANCED_INFINITY, EXPLOSION_BREAKER, DOUBLE_CHARGE;
 
 	public static final DCReg DC = DCReg.of(L2Archery.REG);
 
@@ -217,6 +217,7 @@ public class ArcheryItems {
 			ENDER_UP = genUpgrade("void", () -> new EnderShootFeature(128));
 			RAILGUN_UP = genUpgrade("railgun", () -> new StatFeature(1, 1, 1, 0, 100));
 			FLUX_UP = genUpgrade("flux_up", () -> FluxFeature.DEFAULT);
+			DOUBLE_CHARGE = genUpgrade("double_charge", () -> new DoubleChargeFeature(2));
 
 			ADVANCED_INFINITY = genUpgrade("advanced_infinity", () -> new InfinityFeature(2));
 			EXPLOSION_BREAKER = genUpgrade("explosion_breaker", () -> ExplosionBreakFeature.INS);

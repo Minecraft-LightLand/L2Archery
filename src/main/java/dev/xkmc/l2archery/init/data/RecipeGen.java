@@ -462,6 +462,14 @@ public class RecipeGen {
 					.define('C', Items.END_CRYSTAL)
 					.define('E', Items.LAPIS_LAZULI)
 					.save(pvd);
+
+			unlock(pvd, new BowUpgradeBuilder(ArcheryItems.DOUBLE_CHARGE.get())::unlockedBy, ArcheryItems.UPGRADE.get())
+					.pattern("CBC").pattern("EAE").pattern("CBC")
+					.define('A', ArcheryItems.UPGRADE.get())
+					.define('B', new EnchantmentIngredient(Enchantments.POWER_ARROWS, 5))
+					.define('C', Items.ANVIL)
+					.define('E',  LCItems.BLACKSTONE_CORE)
+					.save(pvd);
 		}
 
 		// enchantments
