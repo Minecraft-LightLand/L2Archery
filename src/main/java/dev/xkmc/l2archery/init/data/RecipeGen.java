@@ -466,9 +466,9 @@ public class RecipeGen {
 			unlock(pvd, new BowUpgradeBuilder(ArcheryItems.DOUBLE_CHARGE.get())::unlockedBy, ArcheryItems.UPGRADE.get())
 					.pattern("CBC").pattern("EAE").pattern("CBC")
 					.define('A', ArcheryItems.UPGRADE.get())
-					.define('B', new EnchantmentIngredient(Enchantments.POWER_ARROWS, 5))
+					.define('B', EnchantmentIngredient.of(pvd.getProvider(), Enchantments.POWER, 5))
 					.define('C', Items.ANVIL)
-					.define('E',  LCItems.BLACKSTONE_CORE)
+					.define('E', LCItems.BLACKSTONE_CORE)
 					.save(pvd);
 		}
 

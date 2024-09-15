@@ -1,6 +1,6 @@
-// 1.21.1	2024-09-12T16:49:55.074034	Registrate Provider for l2archery [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Patchouli Provider]
-2703c181842930cb488e97e5a4d31ecc35abce56 assets/l2archery/lang/en_ud.json
-5cdf0c926a6ea6fc7dceea492568d7849069198a assets/l2archery/lang/en_us.json
+// 1.21.1	2024-09-15T23:14:31.556033	Registrate Provider for l2archery [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Patchouli Provider]
+7305f5171324c53900a8be5ca53d06efc4fe20de assets/l2archery/lang/en_ud.json
+cd3ec6107c4da5d9879f365811b6454611fa08d3 assets/l2archery/lang/en_us.json
 e305034d9e1779af186e802b6253351086f6804a assets/l2archery/models/item/acid_arrow.json
 3f17382074dc6747b7cd59993881a383e7917319 assets/l2archery/models/item/blackstone_arrow.json
 b3febe33525589717437b10b7bd22ca66d6702cd assets/l2archery/models/item/bow/eagle_bow/bow_pulling_0.json
@@ -165,6 +165,7 @@ e059e78a168706ae23ae102b7213a33b44bc2a10 data/l2archery/advancement/recipes/comb
 f1b6491c2494b8a8fcc26563f1a208b3c746195d data/l2archery/advancement/recipes/combat/upgrades/corrosion.json
 767b153b5923844188f37c022feb5ee9da2f2a13 data/l2archery/advancement/recipes/combat/upgrades/curse.json
 42b6f058db81e9bca14038450225f51b56b0ad86 data/l2archery/advancement/recipes/combat/upgrades/damage.json
+e11faa3ac0ac90f7eab1d6e78f0fd1f6f62c568a data/l2archery/advancement/recipes/combat/upgrades/double_charge.json
 16be8b7f9e58ce77d65c4c075d7b933839bdf2ec data/l2archery/advancement/recipes/combat/upgrades/explosion.json
 b18e1c51536f923635a3d16aa1452be1ad2977c7 data/l2archery/advancement/recipes/combat/upgrades/explosion_breaker.json
 66404d064894a889dddb1be2d4ce1b761d72f0e1 data/l2archery/advancement/recipes/combat/upgrades/flux_up.json
@@ -310,6 +311,7 @@ bba59c0ce744fb1fa95f233456e7758bde8b3216 data/l2archery/recipe/upgrades/cleanse.
 a44f881a4947e455448e02e5567d11d40e747ffb data/l2archery/recipe/upgrades/corrosion.json
 2a391f81e4f91eabebf79fe5caa30a59d01a9e80 data/l2archery/recipe/upgrades/curse.json
 74105874914a5229ec8917c1a857d0d950ae0b65 data/l2archery/recipe/upgrades/damage.json
+ede0c1a12fac47de85b4200cae97b40e110f16ff data/l2archery/recipe/upgrades/double_charge.json
 448235787dbd3b87386d5881df854691e49cdb16 data/l2archery/recipe/upgrades/explosion.json
 d41d64e869ed610c15f4cd3f952cd6b1408242c0 data/l2archery/recipe/upgrades/explosion_breaker.json
 78e1878cf9aa66a19c733ecdf181c4c616b5999a data/l2archery/recipe/upgrades/flux_up.json

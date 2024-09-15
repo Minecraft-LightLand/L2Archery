@@ -95,10 +95,11 @@ public class GenericBowItem extends BowItem implements FastItem, IGlowingTarget,
 		if (ins != null) {
 			f *= (1.5f + 0.5f * ins.getAmplifier());
 		}
+		return f;
 	}
 
 	public float getPullForTime(LivingEntity entity, float time) {
-		return Math.min(1, getRawPowerForTime(entity,time));
+		return Math.min(1, getRawPowerForTime(entity, time));
 	}
 
 	/**
