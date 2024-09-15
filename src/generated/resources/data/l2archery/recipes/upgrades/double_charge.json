@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "l2archery:upgrade"
+    },
+    "B": {
+      "type": "l2library:enchantment",
+      "enchantment": "minecraft:power",
+      "min_level": 5
+    },
+    "C": {
+      "item": "minecraft:anvil"
+    },
+    "E": {
+      "item": "l2complements:blackstone_core"
+    }
+  },
+  "pattern": [
+    "CBC",
+    "EAE",
+    "CBC"
+  ],
+  "result": {
+    "item": "l2archery:upgrade",
+    "nbt": {
+      "upgrade": "l2archery:double_charge"
+    }
+  }
+}

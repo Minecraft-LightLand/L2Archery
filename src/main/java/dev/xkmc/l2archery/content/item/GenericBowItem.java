@@ -217,13 +217,18 @@ public class GenericBowItem extends BowItem implements FastItem, IGlowingTarget,
 		return Optional.of(abstractarrow);
 	}
 
-	public float getPullForTime(LivingEntity entity, float time) {
+
+	public float getRawPowerForTime(LivingEntity entity, float time) {
 		float f = time / config.pull_time();
 		MobEffectInstance ins = entity.getEffect(ArcheryEffects.QUICK_PULL.get());
 		if (ins != null) {
-			f *= (1.5 + 0.5 * ins.getAmplifier());
+			f *= (1.5f + 0.5f * ins.getAmplifier());
 		}
-		return Math.min(1, f);
+		return f;
+	}
+
+	public float getPullForTime(LivingEntity entity, float time) {
+		return Math.min(1, getRawPowerForTime(entity, time));
 	}
 
 	/**

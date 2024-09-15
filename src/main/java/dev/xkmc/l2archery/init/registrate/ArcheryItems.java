@@ -21,8 +21,8 @@ import dev.xkmc.l2archery.content.upgrade.Upgrade;
 import dev.xkmc.l2archery.content.upgrade.UpgradeItem;
 import dev.xkmc.l2archery.init.L2Archery;
 import dev.xkmc.l2archery.init.data.ArcheryDamageState;
-import dev.xkmc.l2archery.init.data.LangData;
 import dev.xkmc.l2archery.init.data.ArcheryTagGen;
+import dev.xkmc.l2archery.init.data.LangData;
 import dev.xkmc.l2complements.init.materials.LCMats;
 import dev.xkmc.l2complements.init.registrate.LCEffects;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
@@ -70,7 +70,7 @@ public class ArcheryItems {
 	public static final RegistryEntry<Upgrade> GLOW_UP, NO_FALL_UP, FIRE_UP, ICE_UP, EXPLOSION_UP, ENDER_UP,
 			MAGNIFY_UP_1, MAGNIFY_UP_2, MAGNIFY_UP_3, DAMAGE_UP, PUNCH_UP, BLACKSTONE_UP, HARM_UP, HEAL_UP, SHINE_UP,
 			LEVITATE_UP, SUPERDAMAGE_UP, RAILGUN_UP, FLUX_UP, FLOAT_UP, SLOW_UP, POISON_UP, WITHER_UP, WEAK_UP, CORROSION_UP,
-			CURSE_UP, CLEANSE_UP, ADVANCED_INFINITY, EXPLOSION_BREAKER;
+			CURSE_UP, CLEANSE_UP, ADVANCED_INFINITY, EXPLOSION_BREAKER, DOUBLE_CHARGE;
 
 	static {
 		{
@@ -210,6 +210,7 @@ public class ArcheryItems {
 			ENDER_UP = genUpgrade("void", () -> new EnderShootFeature(128));
 			RAILGUN_UP = genUpgrade("railgun", () -> new StatFeature(1, 1, 1, 0, 100));
 			FLUX_UP = genUpgrade("flux_up", () -> FluxFeature.DEFAULT);
+			DOUBLE_CHARGE = genUpgrade("double_charge", () -> new DoubleChargeFeature(2));
 
 			ADVANCED_INFINITY = genUpgrade("advanced_infinity", () -> new InfinityFeature(2));
 			EXPLOSION_BREAKER = genUpgrade("explosion_breaker", () -> ExplosionBreakFeature.INS);
