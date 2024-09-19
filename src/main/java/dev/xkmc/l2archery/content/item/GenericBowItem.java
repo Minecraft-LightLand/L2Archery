@@ -257,9 +257,9 @@ public class GenericBowItem extends BowItem implements FastItem, IGlowingTarget,
 	}
 
 	@Override
-	public boolean isPrimaryItemFor(ItemStack stack, Holder<Enchantment> enchantment) {
+	public boolean supportsEnchantment(ItemStack stack, Holder<Enchantment> enchantment) {
 		if (enchantment.is(Enchantments.BINDING_CURSE)) return true;
-		return super.isPrimaryItemFor(stack, enchantment);
+		return super.supportsEnchantment(stack, enchantment);
 	}
 
 	public int getUpgradeSlot(ItemStack stack) {

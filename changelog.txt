@@ -1,5 +1,7 @@
-3.0.0+5
+3.0.0+7
+- Fix binding curse enchantability
 - Add double charge
+- Add golem compat
 
 3.0.0+4
 - Port to 1.21.1
