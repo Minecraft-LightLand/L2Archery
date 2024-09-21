@@ -36,5 +36,7 @@ public class ArcheryTagGen {
 
 	public static void genItemTag(RegistrateItemTagsProvider pvd) {
 		pvd.addTag(ADVANCED_INFINITE_ARROWS).add(Items.TIPPED_ARROW, Items.SPECTRAL_ARROW);
+		pvd.addTag(ItemTags.BOW_ENCHANTABLE).addTag(PROF_BOWS);
+		pvd.addTag(ItemTags.DURABILITY_ENCHANTABLE).addTag(PROF_BOWS);
 	}
 }

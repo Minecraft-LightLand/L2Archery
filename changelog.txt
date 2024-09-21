@@ -1,3 +1,6 @@
+3.0.0+8
+- Fix vanilla enchantment enchantability
+
 3.0.0+7
 - Fix binding curse enchantability
 - Add double charge

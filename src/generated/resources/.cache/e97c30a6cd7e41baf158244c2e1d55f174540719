@@ -1,4 +1,4 @@
-// 1.21.1	2024-09-15T23:14:31.556033	Registrate Provider for l2archery [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Patchouli Provider]
+// 1.21.1	2024-09-21T16:03:28.62277	Registrate Provider for l2archery [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Patchouli Provider]
 7305f5171324c53900a8be5ca53d06efc4fe20de assets/l2archery/lang/en_ud.json
 cd3ec6107c4da5d9879f365811b6454611fa08d3 assets/l2archery/lang/en_us.json
 e305034d9e1779af186e802b6253351086f6804a assets/l2archery/models/item/acid_arrow.json
@@ -351,3 +351,5 @@ c14a1e0d9df699913f8d72594057527adb8f474c data/minecraft/tags/damage_type/bypasse
 29e70f8eeb7ac038492a4b2b262056e7b6f344c2 data/minecraft/tags/damage_type/is_projectile.json
 787eeb936d3f5bf066d59310c5db1423d49a5b8f data/minecraft/tags/entity_type/arrows.json
 8d54f4513cffd6ced91aaea2a3ecdad4065dd132 data/minecraft/tags/item/arrows.json
+273ef77cac6309f8fd56d2c918090b0d01180cab data/minecraft/tags/item/enchantable/bow.json
+273ef77cac6309f8fd56d2c918090b0d01180cab data/minecraft/tags/item/enchantable/durability.json
