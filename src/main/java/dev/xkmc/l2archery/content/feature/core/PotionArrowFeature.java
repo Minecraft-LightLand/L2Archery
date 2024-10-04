@@ -8,6 +8,7 @@ import dev.xkmc.l2archery.init.data.LangData;
 import dev.xkmc.l2archery.init.registrate.ArcheryRegister;
 import dev.xkmc.l2core.base.effects.EffectUtil;
 import dev.xkmc.l2core.util.Proxy;
+import dev.xkmc.l2core.util.ServerProxy;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffect;
@@ -24,7 +25,7 @@ public record PotionArrowFeature(List<MobEffectInstance> instances) implements O
 	public static final PotionArrowFeature NULL = new PotionArrowFeature(List.of());
 
 	public static BowArrowFeature fromUpgradeConfig(Upgrade upgrade) {
-		var reg = Proxy.getRegistryAccess();
+		var reg = ServerProxy.getRegistryAccess();
 		if (reg != null) {
 			var ans = ArcheryRegister.UPGRADE_STAT.get(reg, ArcheryRegister.UPGRADE.get().wrapAsHolder(upgrade));
 			if (ans != null) return ans.getEffects();

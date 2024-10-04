@@ -1,3 +1,6 @@
+3.0.0+9
+- Fix server crash. Requires L2Library 3.0.2+7
+
 3.0.0+8
 - Fix vanilla enchantment enchantability
 

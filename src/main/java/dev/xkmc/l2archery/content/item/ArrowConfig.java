@@ -5,7 +5,7 @@ import dev.xkmc.l2archery.content.feature.core.PotionArrowFeature;
 import dev.xkmc.l2archery.content.stats.BowArrowStatType;
 import dev.xkmc.l2archery.init.data.LangData;
 import dev.xkmc.l2archery.init.registrate.ArcheryRegister;
-import dev.xkmc.l2core.util.Proxy;
+import dev.xkmc.l2core.util.ServerProxy;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
@@ -14,7 +14,7 @@ public record ArrowConfig(GenericArrowItem id, int infLevel,
 						  List<BowArrowFeature> feature) implements IGeneralConfig {
 
 	private double getValue(BowArrowStatType type) {
-		var reg = Proxy.getRegistryAccess();
+		var reg = ServerProxy.getRegistryAccess();
 		if (reg != null) {
 			var ans = ArcheryRegister.ITEM_STAT.get(reg, id.builtInRegistryHolder());
 			if (ans != null) return ans.stats().getOrDefault(type, type.getDefault());
@@ -23,7 +23,7 @@ public record ArrowConfig(GenericArrowItem id, int infLevel,
 	}
 
 	public PotionArrowFeature getEffects() {
-		var reg = Proxy.getRegistryAccess();
+		var reg = ServerProxy.getRegistryAccess();
 		if (reg != null) {
 			var ans = ArcheryRegister.ITEM_STAT.get(reg, id.builtInRegistryHolder());
 			if (ans != null) return ans.getEffects();

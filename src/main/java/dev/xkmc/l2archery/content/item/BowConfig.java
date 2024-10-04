@@ -5,13 +5,14 @@ import dev.xkmc.l2archery.content.feature.core.PotionArrowFeature;
 import dev.xkmc.l2archery.content.stats.BowArrowStatType;
 import dev.xkmc.l2archery.init.registrate.ArcheryRegister;
 import dev.xkmc.l2core.util.Proxy;
+import dev.xkmc.l2core.util.ServerProxy;
 
 import java.util.List;
 
 public record BowConfig(GenericBowItem id, int rank, List<BowArrowFeature> feature) implements IBowConfig {
 
 	private double getValue(BowArrowStatType type) {
-		var reg = Proxy.getRegistryAccess();
+		var reg = ServerProxy.getRegistryAccess();
 		if (reg != null) {
 			var ans = ArcheryRegister.ITEM_STAT.get(reg, id.builtInRegistryHolder());
 			if (ans != null) return ans.stats().getOrDefault(type, type.getDefault());
@@ -20,7 +21,7 @@ public record BowConfig(GenericBowItem id, int rank, List<BowArrowFeature> featu
 	}
 
 	public PotionArrowFeature getEffects() {
-		var reg = Proxy.getRegistryAccess();
+		var reg = ServerProxy.getRegistryAccess();
 		if (reg != null) {
 			var ans = ArcheryRegister.ITEM_STAT.get(reg, id.builtInRegistryHolder());
 			if (ans != null) return ans.getEffects();

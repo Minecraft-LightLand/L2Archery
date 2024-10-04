@@ -5,12 +5,13 @@ import dev.xkmc.l2archery.content.feature.core.PotionArrowFeature;
 import dev.xkmc.l2archery.init.registrate.ArcheryRegister;
 import dev.xkmc.l2core.init.L2LibReg;
 import dev.xkmc.l2core.util.Proxy;
+import dev.xkmc.l2core.util.ServerProxy;
 
 public class PotionArrowEnchantment extends BaseBowEnchantment {
 
 	@Override
 	public BowArrowFeature getFeature(int v) {
-		var reg = Proxy.getRegistryAccess();
+		var reg = ServerProxy.getRegistryAccess();
 		if (reg != null) {
 			var ans = ArcheryRegister.ENCH_STAT.get(reg, L2LibReg.ENCH.get().wrapAsHolder(this));
 			if (ans != null) return ans.getEffects(v);
