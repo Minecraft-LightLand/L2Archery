@@ -1,3 +1,9 @@
+3.0.1
+- Respect FOV effect scale client option
+
+3.0.0+10
+- Fix railgun upgrade
+
 3.0.0+9
 - Fix server crash. Requires L2Library 3.0.2+7
 

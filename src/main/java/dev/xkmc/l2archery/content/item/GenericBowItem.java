@@ -4,6 +4,7 @@ import dev.xkmc.l2archery.content.controller.ArrowFeatureController;
 import dev.xkmc.l2archery.content.controller.BowFeatureController;
 import dev.xkmc.l2archery.content.enchantment.IBowEnchantment;
 import dev.xkmc.l2archery.content.energy.IFluxItem;
+import dev.xkmc.l2archery.content.entity.GenericArrowEntity;
 import dev.xkmc.l2archery.content.feature.BowArrowFeature;
 import dev.xkmc.l2archery.content.feature.FeatureList;
 import dev.xkmc.l2archery.content.feature.bow.FluxFeature;
@@ -71,7 +72,11 @@ public class GenericBowItem extends BowItem implements FastItem, IGlowingTarget,
 
 	@Override
 	protected void shootProjectile(LivingEntity shooter, Projectile projectile, int index, float velocity, float inaccuracy, float angle, @Nullable LivingEntity target) {
-		super.shootProjectile(shooter, projectile, index, velocity * config.speed() / 3, 0, angle, target);
+		float speed = config.speed();
+		if (projectile instanceof GenericArrowEntity e) {
+			speed = e.data.bow().getConfig().speed();
+		}
+		super.shootProjectile(shooter, projectile, index, velocity * speed / 3, 0, angle, target);
 	}
 
 	@Override
@@ -138,7 +143,7 @@ public class GenericBowItem extends BowItem implements FastItem, IGlowingTarget,
 				int i = this.getUseDuration(stack, entityLiving) - timeLeft;
 				i = net.neoforged.neoforge.event.EventHooks.onArrowLoose(stack, level, player, i, !itemstack.isEmpty());
 				if (i < 0) return;
-				// add user parameter
+				// CHANGE: add user parameter
 				float f = getPowerForTime(player, i);
 				if (!((double) f < 0.1)) {
 					List<ItemStack> list = draw(stack, itemstack, player);
