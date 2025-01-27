@@ -1,19 +1,12 @@
+3.0.2
+- Fix compatibility with newest NeoForge
+
 3.0.1
 - Respect FOV effect scale client option
-
-3.0.0+10
 - Fix railgun upgrade
-
-3.0.0+9
 - Fix server crash. Requires L2Library 3.0.2+7
-
-3.0.0+8
 - Fix vanilla enchantment enchantability
-
-3.0.0+7
 - Fix binding curse enchantability
 - Add double charge
 - Add golem compat
-
-3.0.0+4
 - Port to 1.21.1
