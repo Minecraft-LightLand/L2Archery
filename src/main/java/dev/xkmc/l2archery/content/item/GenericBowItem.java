@@ -378,7 +378,7 @@ public class GenericBowItem extends BowItem implements FastItem, IGlowingTarget,
 	public FeatureList getFeatures(@Nullable ItemStack stack) {
 		FeatureList ans = new FeatureList();
 		PotionArrowFeature bow_eff = config.getEffects();
-		if (bow_eff.instances().size() > 0) ans.add(bow_eff);
+		if (!bow_eff.instances().isEmpty()) ans.add(bow_eff);
 		for (BowArrowFeature feature : config.feature()) {
 			ans.add(feature);
 		}

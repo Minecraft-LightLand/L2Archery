@@ -69,7 +69,7 @@ public class GenericArrowItem extends ArrowItem {
 	public FeatureList getFeatures() {
 		FeatureList list = new FeatureList();
 		PotionArrowFeature arrow_eff = config.getEffects();
-		if (arrow_eff.instances().size() > 0) {
+		if (!arrow_eff.instances().isEmpty()) {
 			list.add(arrow_eff);
 		}
 		for (BowArrowFeature feature : config.feature()) {

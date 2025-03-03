@@ -7,7 +7,6 @@ import dev.xkmc.l2archery.init.data.LangData;
 import dev.xkmc.l2library.base.effects.EffectUtil;
 import dev.xkmc.l2library.util.code.GenericItemStack;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 
@@ -18,7 +17,7 @@ public record PullEffectFeature(List<Supplier<MobEffectInstance>> effects) imple
 
 	@Override
 	public void onPull(LivingEntity player, GenericItemStack<GenericBowItem> bow) {
-		if (player instanceof ServerPlayer) {
+		if (!player.level().isClientSide()) {
 			for (var eff : effects) {
 				EffectUtil.addEffect(player, eff.get(), EffectUtil.AddReason.SELF, player);
 			}

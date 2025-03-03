@@ -63,7 +63,7 @@ public class JeedHelper {
 
 
 		public ArcheryJeedRecipe(ResourceLocation id) {
-			super(id, null, NonNullList.create());
+			super(id, null, NonNullList.create(), List.of(), List.of());
 		}
 
 		public ArcheryJeedRecipe(ResourceLocation id, JeedType type, ResourceLocation name) {

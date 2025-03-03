@@ -1,3 +1,10 @@
+2.5.0
+- Switch to new ModularGolem support
+
+
+2.4.17
+- Fix JEED compat
+
 2.4.16
 - Respect FOV effect scale option
 

@@ -202,7 +202,7 @@ dependencies {
 
     implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
     implementation fg.deobf("mezz.jei:jei-${jei_minecraft_version}:${jei_version}")
-    implementation fg.deobf("curse.maven:just-enough-effect-descriptions-jeed-532286:4599236")
+    implementation fg.deobf("curse.maven:just-enough-effect-descriptions-jeed-532286:6134582")
     runtimeOnly fg.deobf("curse.maven:attributefix-280510:4844658")
     runtimeOnly fg.deobf("curse.maven:max-health-fix-492246:4714765")
 
@@ -254,7 +254,7 @@ publishing {
 tasks.register('publishCurseForge', TaskPublishCurseForge) {
     apiToken = secrets.get("curseforge_token")
     def mainFile = upload(project.curseforge_project, new File("./build/libs/${modid}-${ll_version}.jar"))
-    mainFile.changelog = new File('./changelog.txt')
+    mainFile.changelog = new File('./changelog.txt').text.split("\n\n\n")[0]
     mainFile.addEnvironment("Client", "Server")
     mainFile.addGameVersion("1.20.1")
     mainFile.addModLoader("Forge","NeoForge")
