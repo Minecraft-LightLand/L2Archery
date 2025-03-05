@@ -1,3 +1,6 @@
+3.0.3
+- Support Mob Weapon API
+
 3.0.2
 - Fix compatibility with newest NeoForge
 

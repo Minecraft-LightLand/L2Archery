@@ -18,7 +18,7 @@ public record PullEffectFeature(List<Supplier<MobEffectInstance>> effects) imple
 
 	@Override
 	public void onPull(LivingEntity player, GenericItemStack<GenericBowItem> bow) {
-		if (player instanceof ServerPlayer) {
+		if (!player.level().isClientSide()) {
 			for (var eff : effects) {
 				EffectUtil.addEffect(player, eff.get(), player);
 			}
