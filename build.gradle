@@ -138,7 +138,7 @@ repositories {
         name = "OctoStudios"
         url = uri("https://maven.octo-studios.com/releases")
     }
-    mavenLocal();
+    mavenLocal()
 }
 
 dependencies {
